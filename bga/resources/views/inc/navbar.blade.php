@@ -8,19 +8,16 @@
             <li>
                 <a class="nav-link" href="{{route('home')}}">Home</a>
             </li>
-            <li>
-                <a class="nav-link" href="{{route('home')}}">Battle</a>
+        </ul>
+    </div>
+    <div>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('login')}}">Log in</a>
+            </li>
+            <li align="right" class="nav-item-right">
+                <a class="nav-link" href="{{route('logout')}}">Logout</a>
             </li>
         </ul>
     </div>
-    {{--<div>--}}
-        {{--<ul class="navbar-nav">--}}
-            {{--<li class="nav-item">--}}
-                {{--<a class="nav-link" href="{{route('login')}}">Log in</a>--}}
-            {{--</li>--}}
-            {{--<li align="right" class="nav-item-right">--}}
-                {{--<a class="nav-link" href="{{route('register')}}">Registreren</a>--}}
-            {{--</li>--}}
-        {{--</ul>--}}
-    {{--</div>--}}
 </nav>
