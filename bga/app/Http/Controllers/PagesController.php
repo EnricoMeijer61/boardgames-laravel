@@ -8,7 +8,14 @@ class PagesController extends Controller
 {
     public function index(){
         $title = 'Dit is de index pagina';
-        //return view ('pages.index', compact('title'));
         return view ('welcome')->with('title', $title);
+    }
+    public function login(){
+        $title = 'Dit is de index pagina';
+        return view ('auth.login')->with('title', $title);
+    }
+    public function register(){
+        $title = 'Dit is de index pagina';
+        return view ('auth.register')->with('title', $title);
     }
 }
