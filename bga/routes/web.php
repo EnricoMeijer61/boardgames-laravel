@@ -17,7 +17,7 @@ Route::get('/login', 'PagesController@login')->name('login');
 Route::get('/register', 'PagesController@register')->name('register');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
-Route::resource('/games', 'GamesController');
+Route::resource('/games', 'GameController');
 
 Auth::routes();
 

@@ -7,7 +7,9 @@
         <p>alle games</p>
 
         <ul>
-
+            @foreach ($games as $game)
+                <li>{{ $games->naam }}</li>
+                @endforeach
         </ul>
     </div>
     @endsection

@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Games;
 use Illuminate\Http\Request;
 
-class GamesController extends Controller
+class GameController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class GamesController extends Controller
      */
     public function index()
     {
-        $games = Game::latest();
-        return view ('games.index', compact('games'));
+        //
     }
 
     /**
@@ -25,7 +23,7 @@ class GamesController extends Controller
      */
     public function create()
     {
-        return view ('games.create');
+        //
     }
 
     /**
@@ -36,11 +34,7 @@ class GamesController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate([
-            'naam' => 'required',
-            ]);
-        Games::create($request->all());
-        return redirect()->route('games.index')->with('succes', 'Resultaat toegevoegd');
+        //
     }
 
     /**
