@@ -8,7 +8,7 @@ class PagesController extends Controller
 {
     public function index(){
         $title = 'Dit is de index pagina';
-        return view ('welcome')->with('title', $title);
+        return view ('pages.index')->with('title', $title);
     }
     public function login(){
         $title = 'Dit is de index pagina';
