@@ -5,11 +5,10 @@
     <div>
         <h1>Games</h1>
         <p>alle games</p>
-
         <ul>
             @foreach ($games as $game)
-                <li>{{ $games->naam }}</li>
-                @endforeach
+                <p>{{ $game->naam }} </p>
+            @endforeach
         </ul>
     </div>
-    @endsection
+@endsection
