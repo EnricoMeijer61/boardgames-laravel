@@ -19,7 +19,7 @@
                         </li>
                         @if ( Auth::user() )
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('gamedetails.index')}}">Resultaten</a>
+                            <a class="nav-link" href="{{route('gamedetails.index')}}">Games</a>
                         </li>
                         @endif
                         <li class="nav-item">
@@ -30,9 +30,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('admin')}}">Admin</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('tournament')}}">Toernooi</a>
                         </li>
                     </ul>
 

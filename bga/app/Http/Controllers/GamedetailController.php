@@ -38,18 +38,10 @@ class GamedetailController extends Controller
     public function store(Request $request)
     {
        request()->validate([
-           'table' => 'required',
-           'round' => 'required',
-           'playtime' => 'required',
+           'name' => 'required',
+           'nop' => 'required',
+           'duration' => 'required',
            'description' => 'required',
-           'user01' => 'required',
-           'points01' => 'required',
-           'user02' => 'required',
-           'points02' => 'required',
-           'user03' => 'required',
-           'points03' => 'required',
-           'user04' => 'required',
-           'points04' => 'required',
        ]);
        Gamedetail::create($request->all());
        return redirect()->route('gamedetails.index')->with('succes', 'Resultaat toegevoegd');
@@ -90,18 +82,10 @@ class GamedetailController extends Controller
     public function update(Request $request, $id)
     {
         request()->validate([
-            'table' => 'required',
-            'round' => 'required',
-            'playtime' => 'required',
+            'name' => 'required',
+            'nop' => 'required',
+            'duration' => 'required',
             'description' => 'required',
-            'user01' => 'required',
-            'points01' => 'required',
-            'user02' => 'required',
-            'points02' => 'required',
-            'user03' => 'required',
-            'points03' => 'required',
-            'user04' => 'required',
-            'points04' => 'required',
         ]);
         Gamedetail::find($id)->update($request->all());
         return redirect()->route('gamedetails.index')->with('succes', 'Resultaat bewerkt');

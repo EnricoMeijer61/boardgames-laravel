@@ -15,18 +15,10 @@ class CreateGamedetailsTable extends Migration
     {
         Schema::create('gamedetails', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('table');
-            $table->integer('round');
-            $table->integer('playtime');
+            $table->String('name');
+            $table->integer('nop');
+            $table->integer('duration');
             $table->text('description');
-            $table->string('user01');
-            $table->integer('points01');
-            $table->string('user02');
-            $table->integer('points02');
-            $table->string('user03');
-            $table->integer('points03');
-            $table->string('user04');
-            $table->integer('points04');
             $table->timestamps();
         });
     }

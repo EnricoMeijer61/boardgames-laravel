@@ -31,4 +31,4 @@ Route::resource('/leaderboard', 'LeaderboardController')->name('index', 'leaderb
 Route::resource('/gamedetails', 'GamedetailController');
 Route::resource('/users', 'Usercontroller');
 
-Route::resource('/tournament', 'TournamentController')->name('index', 'tournament');
+
