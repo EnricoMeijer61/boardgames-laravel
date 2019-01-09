@@ -1,4 +1,4 @@
-@extends('layout.auth')
+@extends('layout.master')
 
 @section('content')
 <div class="container">
@@ -57,11 +57,9 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                @if (Route::has('register'))
-                                    <a class="btn btn-link" href="{{ route('register') }}">
-                                        {{ __('Create an account') }}
-                                    </a>
-                                @endif
+                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    {{ __('Forgot Your Password?') }}
+                                </a>
                             </div>
                         </div>
                     </form>

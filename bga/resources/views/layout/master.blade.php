@@ -10,7 +10,7 @@
     <title>{{config('app.name', '99GAMES')}}</title>
 </head>
 <body>
-@include('inc.navbar')
+@include('layout.app')
 <div class="container">
     @yield('content')
 </div>

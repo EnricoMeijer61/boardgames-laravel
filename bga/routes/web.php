@@ -10,15 +10,25 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Http\Request;
 
-Route::get('/home', 'PagesController@index')->name('home');
+
+Route::get('/logout', 'UserController@logout')->name('logout');
+Route::patch('/users/{user}/update',  ['as' => 'users.update', 'uses' => 'UserController@update']);
+
 Route::get('/', 'PagesController@index')->name('home');
-Route::get('/login', 'PagesController@login')->name('login');
-Route::get('/register', 'PagesController@register')->name('register');
-
-Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
-Route::resource('/games', 'GameController');
-
+Route::get('/home', 'PagesController@index')->name('home');
+Route::get('/about', 'PagesController@about')->name('about');
+Route::get('/algemenevoorwaarden', 'PagesController@algemenevoorwaarden')->name('algemenevoorwaarden');
+Route::get('/rules', 'PagesController@rules')->name('rules');
+Route::get('/service', 'PagesController@service')->name('service');
+Route::get('/result', 'PagesController@result')->name('result');
+Route::get('/admin', 'PagesController@admin')->name('admin');
 Auth::routes();
 
-//Route::get('/login', 'HomeController@index')->name('login');
+Route::resource('/message', 'MessageController')->name('index', 'message');
+Route::resource('/leaderboard', 'LeaderboardController')->name('index', 'leaderboard');
+Route::resource('/gamedetails', 'GamedetailController');
+Route::resource('/users', 'Usercontroller');
+
+Route::resource('/tournament', 'TournamentController')->name('index', 'tournament');

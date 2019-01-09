@@ -1,18 +1,26 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" rel="stylesheet">
-    <title>{{config('app.name', '99GAMES')}}</title>
-</head>
 <body>
-@include('inc.navbar')
-<div class="container">
-    @yield('content')
+<div class="flex-center position-ref full-height">
+    @if (Route::has('login'))
+        <div class="top-right links">
+            @auth
+                <a href="{{ url('/home') }}">Home</a>
+            @else
+                <a href="{{ route('login') }}">Login</a>
+                <a href="{{ route('register') }}">Register</a>
+            @endauth
+        </div>
+    @endif
+
+    <div class="content">
+        <div class="title m-b-md">
+            Carcassonne
+        </div>
+
+        <div class="links">
+            @foreach ($links as $link)
+                <a href="{{ $link->url }}">{{ $link->title }}</a>
+            @endforeach
+        </div>
+    </div>
 </div>
 </body>
-</html>

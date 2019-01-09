@@ -1,0 +1,8 @@
+html, body {
+    height: 100%;
+    margin-bottom: -50px;
+    background-color: white !important;
+}
+.page-footer {
+    text-align: center;
+}
