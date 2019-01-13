@@ -30,5 +30,6 @@ Route::resource('/message', 'MessageController')->name('index', 'message');
 Route::resource('/leaderboard', 'LeaderboardController')->name('index', 'leaderboard');
 Route::resource('/gamedetails', 'GamedetailController');
 Route::resource('/users', 'Usercontroller');
+Route::resource('/battle', 'BattleController')->name('index', 'battle');
 
 

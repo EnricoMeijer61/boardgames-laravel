@@ -15,8 +15,8 @@ class GamedetailController extends Controller
      */
     public function index()
     {
-        $gamedetails = Gamedetail::latest()->paginate(5);
-        return view('result.index', compact('gamedetails'))->with('i',(request()->input('page', 1)-1)*5);
+        $gamedetails = Gamedetail::all();
+        return view('result.index', compact('gamedetails'));
     }
 
     /**

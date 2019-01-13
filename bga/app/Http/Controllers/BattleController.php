@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\battle;
 use Illuminate\Http\Request;
-
+use DB;
 class BattleController extends Controller
 {
     /**
@@ -14,7 +14,12 @@ class BattleController extends Controller
      */
     public function index()
     {
-        //
+        $users = DB::table('users')->get();
+
+        return view('battle.index', ['users' => $users]);
+
+
+//        return view('battle.index');
     }
 
     /**

@@ -4,9 +4,8 @@
     <div class="row">
         <div class="col-lg-12 text-center">
             <h2>Alle games</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vitae ipsum non aliquet. Sed posuere, nisi
-                vel condimentum ullamcorper, justo lectus posuere urna, a finibus justo massa sed metus. Curabitur sed feugiat urna.
-                Suspendisse sagittis accumsan egestas. Proin pretium hendrerit augue et pulvinar.</p>
+            <p>Dit zijn alle games die we hebben op onze website.
+            staat you spel er niet tussen neem dan contact op net onze admin's</p>
         </div>
     </div>
     @if ($message = Session::get('succes'))
@@ -21,11 +20,6 @@
             <p> {{ $gamedetail->name }}</p>
 
             @endforeach
-        <div class="col-lg-12 text-center">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vitae ipsum non aliquet. Sed posuere, nisi
-                vel condimentum ullamcorper, justo lectus posuere urna, a finibus justo massa sed metus. Curabitur sed feugiat urna.
-                Suspendisse sagittis accumsan egestas. Proin pretium hendrerit augue et pulvinar.</p>
-        </div>
     </div>
     <div class="row">
         <div class="col=sm-12">

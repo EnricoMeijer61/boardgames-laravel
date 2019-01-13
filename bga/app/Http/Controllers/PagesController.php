@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Message;
+use phpDocumentor\Reflection\Types\Array_;
 
 class PagesController extends Controller
 {
     public function index(){
         $title = 'Dit is de index pagina';
-        $messages = Message::latest()->paginate(3);
         //return view ('pages.index', compact('title'));
         return view ('pages.index', compact('messages'))->with('title', $title);
     }
