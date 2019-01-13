@@ -15,8 +15,9 @@ class BattleController extends Controller
     public function index()
     {
         $users = DB::table('users')->get();
+        $gamedetails = DB::table('gamedetails')->get();
 
-        return view('battle.index', ['users' => $users]);
+        return view('battle.index', ['users' => $users],['gamedetails' => $gamedetails]);
 
 
 //        return view('battle.index');
@@ -40,7 +41,16 @@ class BattleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        request()->validate([
+            'winnaar' => 'required',
+            'lost' => 'required',
+            'game' => 'required',
+            'lost02' => 'nullable',
+            'lost03' => 'nullable',
+
+        ]);
+        Battle::create($request->all());
+        return redirect()->route('home');
     }
 
     /**
@@ -51,7 +61,8 @@ class BattleController extends Controller
      */
     public function show(battle $battle)
     {
-        //
+        $battles = Battle::all();
+        return view('history.show', compact('battles'));
     }
 
     /**

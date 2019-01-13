@@ -31,5 +31,6 @@ Route::resource('/leaderboard', 'LeaderboardController')->name('index', 'leaderb
 Route::resource('/gamedetails', 'GamedetailController');
 Route::resource('/users', 'Usercontroller');
 Route::resource('/battle', 'BattleController')->name('index', 'battle');
+Route::get('/history', 'BattleController@show')->name('history');
 
 

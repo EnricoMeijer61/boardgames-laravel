@@ -17,6 +17,9 @@ class CreateBattlesTable extends Migration
             $table->increments('id');
             $table->String('winnaar');
             $table->String('lost');
+            $table->String('game');
+            $table->String('lost02')->nullable();
+            $table->String('lost03')->nullable();
             $table->timestamps();
         });
     }
