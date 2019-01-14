@@ -75,13 +75,6 @@
                         </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <p>Iedereen die zich inschrijft geeft toestemming om
-                                   gefilmd en gefotografeerd te worden en
-                                   gaat akkoord met de <a href="{{ url('algemenevoorwaarden') }}">Algemene voorwaarden.</a></p>
-                            </div>
-                        </div>
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
