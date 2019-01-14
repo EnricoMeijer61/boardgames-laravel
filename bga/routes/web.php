@@ -28,9 +28,8 @@ Auth::routes();
 
 Route::resource('/message', 'MessageController')->name('index', 'message');
 Route::resource('/leaderboard', 'LeaderboardController')->name('index', 'leaderboard');
-Route::resource('/gamedetails', 'GamedetailController')->name('create', 'gamedetails');
+Route::resource('/gamedetails', 'GamedetailController')->name('index', 'gamedetails');
 Route::resource('/users', 'Usercontroller');
 Route::resource('/battle', 'BattleController')->name('index', 'battle');
 Route::get('/history', 'BattleController@show')->name('history');
-
 

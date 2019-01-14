@@ -70,8 +70,11 @@ class BattleController extends Controller
      */
     public function edit(battle $battle)
     {
-        $battle = Battle::find($id);
-        return view('battle.index', compact('battle'));
+        $users = DB::table('users')->get();
+        $gamedetails = DB::table('gamedetails')->get();
+        $battle = Battle::find($battle);
+//        compact('battle'
+        return view('battle.index', ['users' => $users],['gamedetails' => $gamedetails] );
     }
 
     /**
@@ -83,7 +86,14 @@ class BattleController extends Controller
      */
     public function update(Request $request, battle $battle)
     {
-        //
+        request()->validate([
+            'winnaar' => 'required',
+            'lost' => 'required',
+            'game' => 'required',
+            'lost02' => 'nullable',
+            'lost03' => 'nullable',
+        ]);
+        Battle::find($battle)->update($request->all());
     }
 
     /**
@@ -94,8 +104,6 @@ class BattleController extends Controller
      */
     public function destroy(battle $battle)
     {
-//        Battle::find($id)->delete();
-//        Battle::find($id)->delete();
         {
             $battle->delete();     //ERROR HERE
             return redirect('home');

@@ -17,17 +17,15 @@
                         <li class="nav-item">
                            <a class="nav-link" href="{{route('battle')}}">Battle</a>
                         </li>
-                        {{--@if ( Auth::user() )--}}
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('history')}}">Games</a>
                         </li>
-                        {{--@endif--}}
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('leaderboard')}}">Ranglijst</a>
                         </li>
-                        {{--<li class="nav-item">--}}
-                            {{--<a class="nav-link" href="{{route('gamedetails')}}">History</a>--}}
-                        {{--</li>--}}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('admin')}}">Admin</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

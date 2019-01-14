@@ -10,7 +10,7 @@
             <p>Er zijn verschllende bordgames op deze website die je kan spelen, zit jou favorite bordgame er niet tussen?
             Voeg deze dan zelf toe! <br>
             Dit kan via de volgende link:</p>
-            <a class="nav-link" href="{{route('gamedetails')}}">Game toevoegen!</a>
+            <a class="nav-link" href="{{route('gamedetails.create')}}">Game toevoegen!</a>
         </div>
     </div>
 @endsection
