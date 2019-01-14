@@ -18,9 +18,6 @@ class BattleController extends Controller
         $gamedetails = DB::table('gamedetails')->get();
 
         return view('battle.index', ['users' => $users],['gamedetails' => $gamedetails]);
-
-
-//        return view('battle.index');
     }
 
     /**
@@ -73,7 +70,8 @@ class BattleController extends Controller
      */
     public function edit(battle $battle)
     {
-        //
+        $battle = Battle::find($id);
+        return view('battle.index', compact('battle'));
     }
 
     /**
@@ -96,6 +94,12 @@ class BattleController extends Controller
      */
     public function destroy(battle $battle)
     {
-        //
+//        Battle::find($id)->delete();
+//        Battle::find($id)->delete();
+        {
+            $battle->delete();     //ERROR HERE
+            return redirect('home');
+
+        }
     }
 }
