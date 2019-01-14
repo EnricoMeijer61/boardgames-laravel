@@ -102,7 +102,7 @@ class GamedetailController extends Controller
     public function destroy($id)
     {
         Gamedetail::find($id)->delete();
-        return redirect()->route('gamedetails.index')->with('succes', 'resultaat verwijderd');
+        return redirect()->route('gamedetails')->with('succes', 'resultaat verwijderd');
 
     }
 }
