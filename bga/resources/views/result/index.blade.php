@@ -25,12 +25,11 @@
 
             <tr>
                 <td>{{ $gamedetail->name }}</td>
-                {{--<td>{{ $gamedetail->game }}</td>--}}
-                {{--<td>{{ $gamedetail->lost }}</td>--}}
-                {{--<td>{{ $gamedetail->lost02 }}</td>--}}
-                {{--<td>{{ $gamedetail->lost03 }}</td>--}}
-
+                <td>{{ $gamedetail->nop }}</td>
+                <td>{{ $gamedetail->duration }}</td>
+                <td>{{ $gamedetail->description }}</td>
                     <td>
+                        <a class="btn btn-xs btn primary" href="{{ route('gamedetails.edit', $gamedetail->id) }}">Edit</a>
                         {!! Form::open(['method'=> 'DELETE', 'route'=>['gamedetails.destroy', $gamedetail->id],'style'=> 'display:inline']) !!}
                         {!! Form::submit('Delete',['class'=>'btn btn-xs btn-danger' ]) !!}
                         {!! Form::close() !!}

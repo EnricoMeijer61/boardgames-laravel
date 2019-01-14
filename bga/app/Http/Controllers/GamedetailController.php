@@ -89,7 +89,7 @@ class GamedetailController extends Controller
             'description' => 'required',
         ]);
         Gamedetail::find($id)->update($request->all());
-        return redirect()->route('gamedetails.index')->with('succes', 'Resultaat bewerkt');
+        return redirect()->route('gamedetails')->with('succes', 'Resultaat bewerkt');
 
     }
 

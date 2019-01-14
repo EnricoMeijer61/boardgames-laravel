@@ -24,7 +24,7 @@
                             <a class="nav-link" href="{{route('leaderboard')}}">Ranglijst</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('admin')}}">Admin</a>
+                            <a class="nav-link" href="{{route('gamedetails')}}">Admin</a>
                         </li>
                     </ul>
 
