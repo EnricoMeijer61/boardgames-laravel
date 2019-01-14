@@ -9,6 +9,7 @@
         Wie waren de tegenstanders<br></p>
     </div>
     <div>
+        {{--table with the recent battles played, last played battles are on top.--}}
         <table class="table-striped  text-center table-bordered table">
             <tr>
                 <th class="text-center">Winnaar</th>

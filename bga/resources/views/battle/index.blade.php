@@ -5,7 +5,7 @@
             <p>Vult in wie het bordspel heeft gewonnen, <br> welke game je hebt gespeeld en wie
             je tegenstander(s) was/waren.</p>
         </div>
-
+{{--battle form--}}
     {!! Form::open(['route' => 'battle.store', 'method' => 'POST']) !!}
     {{csrf_field()}}
     <div class="container-fluid ">

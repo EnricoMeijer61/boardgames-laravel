@@ -10,6 +10,7 @@
     </div>
     <div class="text-center">
     <br>
+        {{--table with the gamedetails--}}
         <table class="table-striped  text-center table-bordered table">
             <tr>
                 <th class="text-center">Naam</th>
