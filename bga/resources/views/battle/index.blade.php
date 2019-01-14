@@ -1,5 +1,11 @@
 @extends('layout.master')
     @section('content')
+        <div class="text-center">
+        <h1>Battle</h1>
+            <p>Vult in wie het bordspel heeft gewonnen, <br> welke game je hebt gespeeld en wie
+            je tegenstander(s) was/waren.</p>
+        </div>
+
     {!! Form::open(['route' => 'battle.store', 'method' => 'POST']) !!}
     {{csrf_field()}}
     <div class="container-fluid ">

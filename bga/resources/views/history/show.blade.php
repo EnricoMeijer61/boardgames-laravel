@@ -1,6 +1,13 @@
 @extends('layout.master')
 
 @section('content')
+    <div class="text-center">
+        <h1>Laatste Battle's</h1>
+        <p>Hier zien je de laatste 20 battle's zien.<br>
+        Welke game word er gespeeld?<br>
+        Wie heeft er gewonnen?<br>
+        Wie waren de tegenstanders<br></p>
+    </div>
     <div>
         <table class="table-striped  text-center table-bordered table">
             <tr>

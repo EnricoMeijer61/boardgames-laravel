@@ -23,9 +23,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('leaderboard')}}">Ranglijst</a>
                         </li>
+                        {{--@if ( Auth::admin() )--}}
+                        @if ( Auth::user() )
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('gamedetails')}}">Admin</a>
                         </li>
+                            @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->
