@@ -22,7 +22,6 @@ Route::get('/result', 'PagesController@result')->name('result');
 Route::get('/admin', 'PagesController@admin')->name('admin');
 Auth::routes();
 
-//Route::resource('/message', 'MessageController')->name('index', 'message');
 Route::resource('/leaderboard', 'LeaderboardController')->name('index', 'leaderboard');
 Route::resource('/gamedetails', 'GamedetailController')->name('index', 'gamedetails');
 Route::resource('/users', 'Usercontroller');
