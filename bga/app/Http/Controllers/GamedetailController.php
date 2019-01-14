@@ -26,7 +26,8 @@ class GamedetailController extends Controller
      */
     public function create()
     {
-        return view('result.create');
+        $gamedetails = Gamedetail::all();
+        return view('result.create', compact('gamedetails'));
     }
 
     /**
@@ -44,7 +45,7 @@ class GamedetailController extends Controller
            'description' => 'required',
        ]);
        Gamedetail::create($request->all());
-       return redirect()->route('gamedetails.index')->with('succes', 'Resultaat toegevoegd');
+       return redirect()->route('home')->with('succes', 'Resultaat toegevoegd');
 
     }
 

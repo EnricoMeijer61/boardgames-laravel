@@ -3,11 +3,14 @@
 @section('content')
 
     <div class="row">
-        <div class="text-center col-8">
+        <div class="text-center col-12">
             <h1>Welkom bij Boardgames!</h1>
             <br>
-            <p>Via deze website kun jij je boardgames spelen.</p>
-            <p>Nog geen account? <a class="nav-link" href="{{route('register')}}">Registreer je hier!</a></p>
+            <p>Via deze website kun uw de uitslagen van uw boardgames bijhouden.</p>
+            <p>Er zijn verschllende bordgames op deze website die je kan spelen, zit jou favorite bordgame er niet tussen?
+            Voeg deze dan zelf toe! <br>
+            Dit kan via de volgende link:</p>
+            <a class="nav-link" href="{{route('gamedetails')}}">Game toevoegen!</a>
         </div>
     </div>
 @endsection

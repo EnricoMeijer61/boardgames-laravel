@@ -61,7 +61,7 @@ class BattleController extends Controller
      */
     public function show(battle $battle)
     {
-        $battles = Battle::all();
+        $battles = Battle::latest()->paginate(20);
         return view('history.show', compact('battles'));
     }
 

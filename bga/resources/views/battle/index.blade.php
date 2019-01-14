@@ -1,55 +1,58 @@
 @extends('layout.master')
     @section('content')
-
     {!! Form::open(['route' => 'battle.store', 'method' => 'POST']) !!}
     {{csrf_field()}}
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <div class="collumn">
-            <div class="col-">
+            <div class="col-12">
                 <div class="form-group">
-                    <strong>Winnaar :</strong>
-                        <div class="col-md-3">
-                            <select name="winnaar">
+                    <div class="col-md-12 text-center">
+                    <strong>Winnaar </strong>
+                            <select class="form-control" name="winnaar">
+                                <option class ="form-control "></option>
                                 @foreach($users as $user)
                                     <option class ="form-control" value="{{ $user->fname }}">{{ $user->fname }}</option>
                                 @endforeach
                             </select>
                         </div>
-
-                    <strong>Game :</strong>
-                    <div class="col-md-3">
-                        <select name="game">
+                    <div class="col-md-12 text-center">
+                        <strong>Game</strong>
+                        <select class="form-control" name="game">
+                            <option class ="form-control"></option>
                             @foreach($gamedetails as $game)
                                 <option class ="form-control" value="{{ $game->name }}">{{ $game->name }}</option>
                             @endforeach
                         </select>
                     </div>
-
-                    <strong>tegenstander 1 :</strong>
-                    <div class="col-md-3">
-                        <select name="lost">
+                    <div class="col-md-12 text-center">
+                        <strong>tegenstander 1 </strong>
+                        <select class="form-control" name="lost">
+                            <option class ="form-control"></option>
                             @foreach($users as $user)
                                 <option class ="form-control" value="{{ $user->fname }}">{{ $user->fname }}</option>
                             @endforeach
                         </select>
                     </div>
-                    <strong>tegenstander 2 :</strong>
-                    <div class="col-md-3">
-                        <select name="lost02">
+                    <div class="col-md-12 text-center">
+                        <strong>tegenstander 2 </strong>
+                        <select class="form-control" name="lost02">
+                            <option class ="form-control"></option>
                             @foreach($users as $user)
                                 <option class ="form-control" value="{{ $user->fname }}">{{ $user->fname }}</option>
                             @endforeach
                         </select>
                     </div>
-                    <strong>tegenstander 3 :</strong>
-                    <div class="col-md-3">
-                        <select name="lost03">
+                    <div class="col-md-12 text-center">
+                        <strong>tegenstander 3 </strong>
+                        <select class="form-control" name="lost03">
+                            <option class ="form-control"></option>
                             @foreach($users as $user)
                                 <option class ="form-control" value="{{ $user->fname }}">{{ $user->fname }}</option>
                             @endforeach
                         </select>
                     </div>
-                    <div class="col-">
+                    <div class="col- text-center">
+                        <br>
                         <button type="submit" class="btn btn-xs btn-primary" name="button">Submit</button>
                     </div>
                 </div>
