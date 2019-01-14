@@ -13,7 +13,7 @@
             <div class="col-12">
                 <div class="form-group">
                     <div class="col-md-12 text-center">
-                    <strong>Winnaar </strong>
+                    <strong>Winnaar(*) </strong>
                             <select class="form-control" name="winnaar">
                                 <option class ="form-control "></option>
                                 @foreach($users as $user)
@@ -22,7 +22,7 @@
                             </select>
                         </div>
                     <div class="col-md-12 text-center">
-                        <strong>Game</strong>
+                        <strong>Game(*)</strong>
                         <select class="form-control" name="game">
                             <option class ="form-control"></option>
                             @foreach($gamedetails as $game)
@@ -31,7 +31,7 @@
                         </select>
                     </div>
                     <div class="col-md-12 text-center">
-                        <strong>tegenstander 1 </strong>
+                        <strong>tegenstander 1(*) </strong>
                         <select class="form-control" name="lost">
                             <option class ="form-control"></option>
                             @foreach($users as $user)
@@ -61,6 +61,7 @@
                         <br>
                         <button type="submit" class="btn btn-xs btn-primary" name="button">Submit</button>
                     </div>
+                    <p>Invoervelden met een * zijn verplicht.</p>
                 </div>
             </div>
         </div>

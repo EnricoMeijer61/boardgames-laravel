@@ -12,11 +12,10 @@
     <br>
         <table class="table-striped  text-center table-bordered table">
             <tr>
-                <th class="text-center">Winnaar</th>
-                <th class=" text-center">Spel</th>
-                <th class=" text-center">Tegenstander 1</th>
-                <th class=" text-center">Tegenstander 2</th>
-                <th class=" text-center">Tegenstander 3</th>
+                <th class="text-center">Naam</th>
+                <th class=" text-center">Aantal spelers</th>
+                <th class=" text-center">Speeltijd(in minuten)</th>
+                <th class=" text-center">beschrijving</th>
                 @if ( Auth::user() )
                     <th></th>
                 @endif
