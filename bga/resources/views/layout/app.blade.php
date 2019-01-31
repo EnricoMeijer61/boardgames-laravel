@@ -18,7 +18,7 @@
                            <a class="nav-link" href="{{route('battle')}}">Battle</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('history')}}">Games</a>
+                            <a class="nav-link" href="{{route('gamedetails.create')}}">Games</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('leaderboard')}}">Ranglijst</a>
@@ -28,7 +28,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('gamedetails')}}">Admin</a>
                         </li>
-                            @endif
+                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->
